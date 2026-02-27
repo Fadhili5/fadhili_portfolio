@@ -1,7 +1,7 @@
 export default [
   {
     color: '#ff6600',
-    image: require('../assets/work/xbox.jpg'),
+    image: require('../assets/work/kiliwatch.png'),
     slug: 'kiliwatch',
     title: 'Kiliwatch',
     description: 'A predictive microclimate tool that combines satellite-derived variables with machine learning to forecast heat hotspots at the neighborhood level. Built to help urban planners and residents understand and prepare for localized temperature variations.',
@@ -32,7 +32,7 @@ export default [
   },
   {
     color: '#00ffcc',
-    image: require('../assets/work/airbnb.jpg'),
+    image: require('../assets/work/ecg.png'),
     slug: 'ecg-classifier',
     title: 'Abnormal ECG Classifier',
     description: 'Classifying multi-class ECG signals by incorporating Convolutional Deep Neural Networks (CDNNs), SHapley Additive exPlanations (SHAP) values, and Gradient-weighted Class Activation Mapping (Grad-CAM) to detect a variety of cardiovascular conditions.',
@@ -63,7 +63,7 @@ export default [
   },
   {
     color: '#cc0000',
-    image: require('../assets/work/nike.jpg'),
+    image: require('../assets/work/gazeti.png'),
     slug: 'gazeti-smart',
     title: 'Gazeti-Smart',
     description: 'An innovative project that enhances user engagement with newspaper and print media by aggregating related news stories from the web and presenting them through interactive, detailed narrations using pictorial/cartoon sketches and audio narration.',
@@ -93,7 +93,7 @@ export default [
   },
   {
     color: '#4a0e4e',
-    image: require('../assets/work/trolli.jpg'),
+    image: require('../assets/work/materna.png'),
     slug: 'materna-ai',
     title: 'Materna AI',
     description: 'An AI-powered digital companion providing health education, guidance, and support to expectant mothers. Recognized as 1st Place Winner at Africa\'s Talking Health Hackathon and Top 15 Global Ideas Finalist at Moonshot Awards 2025.',
