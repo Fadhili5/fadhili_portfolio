@@ -9,6 +9,11 @@
     "build": "webpack --progress --config webpack.config.build.js",
     "deploy": "cross-env git subtree push --prefix build origin gh-pages"
   },
+  "overrides": {
+    "pug-loader": {
+      "pug": "$pug"
+    }
+  },
   "dependencies": {
     "@babel/core": "^7.19.6",
     "@babel/polyfill": "^7.0.0",
