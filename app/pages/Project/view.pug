@@ -10,6 +10,23 @@ each project, index in projects
             strong(class=styles.information__item__label)=section.label
             span(class=styles.information__item__description)=section.text
 
+      //- Project Description
+      if project.description
+        div(class=`Item ${styles.project_description}`)
+          p=project.description
+
+      //- Project Links
+      if project.links
+        div(class=`Item ${styles.project_links}`)
+          if project.links.live
+            a(class=styles.project_link href=project.links.live target="_blank")
+              span(class=styles.link_icon) ▶
+              span VIEW LIVE
+          if project.links.github
+            a(class=styles.project_link href=project.links.github target="_blank")
+              span(class=styles.link_icon) ◆
+              span GITHUB
+
       if project.apps
         div(class=`Item ${styles.apps}`)
           h2(class=styles.apps__title) Stores
@@ -22,6 +39,10 @@ each project, index in projects
 
     div(class=`${styles.content} ${styles[`content--${project.template}`]}`)
       each content, index in project.content
+        if content.type === 'text'
+          div(class=`Media ${styles.text_content}`)
+            p=content.text
+
         if content.type === 'screenshot'
           div(class=`Media ${styles.screenshot}`)
             div(class=styles.screenshot__box style=`max-width: ${content.width}px;`)

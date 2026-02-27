@@ -22,20 +22,29 @@
   }
 
   .scrollbar-track {
-    background: none !important;
+    background: rgba($color-eva-orange, 0.1) !important;
+    border-left: 1px solid rgba($color-eva-orange, 0.3) !important;
   }
 
   .scrollbar-track-x {
-    height: 3px !important;
+    height: 4px !important;
+    border-left: none !important;
+    border-top: 1px solid rgba($color-eva-orange, 0.3) !important;
   }
 
   .scrollbar-track-y {
-    width: 3px !important;
+    width: 6px !important;
   }
 
   .scrollbar-thumb {
-    background: $color-white !important;
+    background: $color-eva-orange !important;
     border-radius: 0 !important;
-    width: 3px !important;
+    width: 4px !important;
+    box-shadow: 0 0 10px rgba($color-eva-orange, 0.5) !important;
+    
+    &:hover {
+      background: $color-nerv-active !important;
+      box-shadow: 0 0 15px rgba($color-nerv-active, 0.7) !important;
+    }
   }
 }

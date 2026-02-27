@@ -1,11 +1,9 @@
 export const URLS = [
   '/about',
   '/work',
-  '/project/adventure-time',
-  '/project/airbnb',
-  '/project/corvette',
-  '/project/nike',
-  '/project/studio-maertens',
-  '/project/trolli',
-  '/project/xbox',
+  '/project/kiliwatch',
+  '/project/ecg-classifier',
+  '/project/gazeti-smart',
+  '/project/materna-ai',
+  '/project/efh-rag',
 ]

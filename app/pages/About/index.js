@@ -18,20 +18,16 @@ export default class extends Page {
 
     const socials = [
       {
-        label: 'Twitter',
-        url: 'https://www.twitter.com/bizar_ro/',
-      },
-      {
         label: 'GitHub',
-        url: 'https://www.github.com/bizarro/',
+        url: 'https://github.com/Fadhili5',
       },
       {
         label: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/luis-bizarro/',
+        url: 'https://www.linkedin.com/in/denis-fadhili-205b272a9/',
       },
       {
-        label: 'Inquiries',
-        url: 'https://bizar.ro/#inquiries',
+        label: 'Email',
+        url: 'mailto:denis.onyango@polyu.edu.hk',
       },
     ]
 

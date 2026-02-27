@@ -1,15 +1,53 @@
 @import '../../styles/index';
 
 .element {
-  background: $color-white;
-  border-radius: 50%;
-  height: 10px;
-  mix-blend-mode: difference;
+  background: transparent;
+  border: 2px solid $color-eva-orange;
+  border-radius: 0;
+  height: 20px;
   pointer-events: none;
   position: absolute;
-  width: 10px;
-  transform: translate(-50%, -50%);
+  width: 20px;
+  transform: translate(-50%, -50%) rotate(45deg);
   z-index: 100;
+  box-shadow: 0 0 10px rgba($color-eva-orange, 0.5);
+  transition: all 0.2s ease;
+
+  // Inner dot
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: $color-nerv-active;
+    box-shadow: 0 0 8px $color-nerv-active;
+  }
+
+  // Targeting crosshair
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba($color-eva-orange, 0.3);
+    border-radius: 50%;
+  }
+
+  &--hover {
+    border-color: $color-nerv-active;
+    box-shadow: 0 0 20px rgba($color-nerv-active, 0.7);
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.5);
+
+    &::before {
+      background: $color-eva-orange;
+    }
+  }
 }
 
 .element__horizontal,
@@ -24,7 +62,7 @@
 
   &:after,
   &:before {
-    border-color: $color-white;
+    border-color: $color-eva-orange;
     border-style: solid;
     content: '';
     height: 5px;
@@ -49,13 +87,13 @@
 
   &:after {
     border-width: 1px 1px 0 0;
-    top: -10px;
+    top: -15px;
     transform: translateX(-50%) rotate(-45deg);
   }
 
   &:before {
     border-width: 0 1px 1px 0;
-    bottom: -10px;
+    bottom: -15px;
     transform: translateX(-50%) rotate(45deg);
   }
 }
@@ -72,13 +110,13 @@
 
   &:after {
     border-width: 1px 0 0 1px;
-    left: -10px;
+    left: -15px;
     transform: translateY(-50%) rotate(-45deg);
   }
 
   &:before {
     border-width: 1px 1px 0 0;
-    right: -10px;
+    right: -15px;
     transform: translateY(-50%) rotate(45deg);
   }
 }

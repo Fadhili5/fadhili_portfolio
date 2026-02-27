@@ -12,6 +12,7 @@
   top: 0;
   visibility: hidden;
   width: 100%;
+  background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%);
 }
 
 .wrapper {
@@ -41,6 +42,8 @@
   justify-content: space-between;
   margin: auto;
   width: 80%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba($color-eva-orange, 0.3);
 
   @include media('<small') {
     display: block;
@@ -49,46 +52,67 @@
 }
 
 .title {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: $font;
+  color: $color-eva-orange;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba($color-eva-orange, 0.5);
+
+  &::before {
+    content: 'PROJECT // ';
+    font-family: $font-terminal;
+    font-size: 12px;
+    color: rgba($color-white, 0.5);
+    display: block;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+  }
 
   @include media('<small') {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 
 .button {
-  color: inherit;
+  color: $color-eva-orange;
   display: inline-block;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
+  font-family: $font-terminal;
   line-height: 1;
   overflow: hidden;
   padding: 18px 65px 18px 30px;
   position: relative;
   text-decoration: none;
-  transition: background 0.4s ease, color 0.4s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
   vertical-align: middle;
   white-space: nowrap;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid $color-eva-orange;
 
   :global(span) {
     display: inline-block;
   }
 
   &:hover {
-    background: $color-white;
+    background: $color-eva-orange;
     color: $color-black;
+    box-shadow: 0 0 25px rgba($color-eva-orange, 0.5);
   }
 
   @include media('<small') {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 25px;
     padding: 12px 55px 12px 20px;
   }
 }
 
 .button__border {
-  background: $color-white;
+  background: $color-eva-orange;
   position: absolute;
 
   &--top {
@@ -175,9 +199,13 @@
   flex-wrap: wrap;
   margin-bottom: 50px;
   text-align: left;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba($color-eva-orange, 0.2);
 
   @include media('<small') {
     margin-bottom: 25px;
+    padding: 15px;
   }
 }
 
@@ -197,7 +225,12 @@
 }
 
 .information__item__label {
-  color: rgba($color-white, 0.5);
+  color: $color-eva-orange;
+  font-family: $font-terminal;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
   display: block;
   font-size: 15px;
   font-weight: 400;
@@ -505,5 +538,90 @@
 
   .screenshot--active & {
     opacity: 1;
+  }
+}
+
+// Project Description
+.project_description {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 4px solid $color-eva-orange;
+
+  p {
+    font-family: $font-terminal;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba($color-white, 0.9);
+    margin: 0;
+
+    @include media('<small') {
+      font-size: 14px;
+    }
+  }
+}
+
+// Project Links
+.project_links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.project_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid $color-eva-orange;
+  color: $color-eva-orange;
+  text-decoration: none;
+  font-family: $font-terminal;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $color-eva-orange;
+    color: $color-black;
+    box-shadow: 0 0 25px rgba($color-eva-orange, 0.5);
+  }
+
+  @include media('<small') {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+}
+
+.link_icon {
+  font-size: 12px;
+}
+
+// Text Content
+.text_content {
+  width: 80%;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba($color-eva-orange, 0.3);
+
+  p {
+    font-family: $font-terminal;
+    font-size: 16px;
+    line-height: 1.9;
+    color: rgba($color-white, 0.85);
+    margin: 0;
+
+    @include media('<small') {
+      font-size: 14px;
+    }
+  }
+
+  @include media('<small') {
+    width: 100%;
+    padding: 20px;
   }
 }

@@ -3,6 +3,9 @@
 @import './unsupported';
 @import './fonts';
 
+// Import Google Fonts for EVA aesthetic
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Noto+Sans+JP:wght@400;700&display=swap');
+
 html {
   box-sizing: border-box;
   cursor: none;
@@ -20,6 +23,72 @@ body {
   height: 100%;
   user-select: none;
   width: 100%;
+
+  // Scanline overlay effect
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      $color-scanline 2px,
+      $color-scanline 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    animation: scanlines 0.1s linear infinite;
+  }
+
+  // CRT flicker effect
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
+    z-index: 9998;
+  }
+}
+
+// Scanline animation
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+// Glitch text animation
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+// Warning flash animation
+@keyframes warning-flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+// Terminal cursor blink
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+// NERV border animation
+@keyframes border-pulse {
+  0%, 100% { border-color: $color-eva-orange; }
+  50% { border-color: $color-nerv-caution; }
 }
 
 *,
@@ -56,4 +125,99 @@ a {
   color: inherit;
   cursor: none;
   text-decoration: none;
+}
+
+// EVA UI Components
+.eva-warning-box {
+  background: $color-terminal-bg;
+  border: $border-warning;
+  padding: 20px;
+  position: relative;
+
+  &::before {
+    content: 'WARNING';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: $color-eva-orange;
+    color: $color-black;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  // Striped border decoration
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: repeating-linear-gradient(
+      45deg,
+      $color-eva-orange,
+      $color-eva-orange 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    opacity: 0.3;
+  }
+}
+
+.eva-caution-box {
+  background: $color-terminal-bg;
+  border: $border-caution;
+  padding: 20px;
+
+  &::before {
+    content: '⚠ CAUTION';
+    display: block;
+    color: $color-nerv-caution;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: warning-flash 1s ease-in-out infinite;
+  }
+}
+
+// Terminal text effect
+.terminal-text {
+  font-family: $font-terminal;
+  color: $color-terminal-text;
+  text-shadow: 0 0 10px $color-terminal-text;
+
+  &::after {
+    content: '█';
+    animation: cursor-blink 1s step-end infinite;
+  }
+}
+
+// NERV-style header
+.nerv-header {
+  background: $color-nerv-panel;
+  border-bottom: 2px solid $color-eva-orange;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    color: $color-eva-orange;
+    font-weight: 900;
+    letter-spacing: 4px;
+  }
+
+  &__status {
+    color: $color-nerv-active;
+    font-family: $font-terminal;
+    font-size: 12px;
+  }
+}
+
+// Hexagon pattern background
+.hex-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ff6600' fill-opacity='0.05'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }

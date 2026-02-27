@@ -10,20 +10,73 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 129px;
+  width: 150px;
   z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid $color-eva-orange;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba($color-eva-orange, 0.1) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    border-color: $color-nerv-active;
+    box-shadow: 0 0 20px rgba($color-nerv-active, 0.3);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .button__text {
+      color: $color-nerv-active;
+      text-shadow: 0 0 10px $color-nerv-active;
+    }
+
+    .button__path {
+      stroke: $color-nerv-active;
+    }
+  }
 
   &:first-child {
     left: 25px;
+    
+    &::after {
+      content: '◀';
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-eva-orange;
+      font-size: 10px;
+    }
   }
 
   &:last-child {
     right: 25px;
+
+    &::after {
+      content: '▶';
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-eva-orange;
+      font-size: 10px;
+    }
   }
 
   @include media('<small') {
-    height: 37px;
-    width: 76px;
+    height: 45px;
+    width: 90px;
 
     &:first-child {
       left: 15px;
@@ -37,15 +90,19 @@
 
 .button__text {
   display: block;
-  font-size: 13px;
-  left: 50%;
-  letter-spacing: 0;
+  font-size: 12px;
+  font-family: $font-terminal;
+  letter-spacing: 2px;
   overflow: hidden;
   pointer-events: none;
   position: absolute;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+  text-transform: uppercase;
+  color: $color-eva-orange;
+  transition: all 0.3s ease;
 
   :global(span) {
     display: inline-block;
@@ -60,7 +117,8 @@
   }
 
   @include media('<small') {
-    font-size: 13px;
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 }
 
@@ -70,12 +128,14 @@
   pointer-events: none;
   position: absolute;
   top: 0;
+  opacity: 0.5;
 }
 
 .button__path {
   fill: none;
-  stroke: $color-white;
+  stroke: $color-eva-orange;
   stroke-width: 1px;
+  transition: stroke 0.3s ease;
 
   @include media('<small') {
     stroke-width: 2px;

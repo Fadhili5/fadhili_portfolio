@@ -27,9 +27,9 @@ export default class extends Element {
         </svg>
       </button>
 
-      <a href="https://peggygou.com/" target="_blank" class="Link ${styles.player__information}">
+      <a href="https://github.com/Fadhili5" target="_blank" class="Link ${styles.player__information}">
         <span class="Title ${styles.player__information__title}">
-          Peggy Gou - Han Jan
+          DENIS FADHILI ONYANGO
         </span>
       </a>
     `

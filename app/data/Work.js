@@ -1,564 +1,151 @@
 export default [
   {
-    color: '#0d3e19',
+    color: '#ff6600',
     image: require('../assets/work/xbox.jpg'),
-    slug: 'xbox',
-    title: 'Xbox Museum',
+    slug: 'kiliwatch',
+    title: 'Kiliwatch',
+    description: 'A predictive microclimate tool that combines satellite-derived variables with machine learning to forecast heat hotspots at the neighborhood level. Built to help urban planners and residents understand and prepare for localized temperature variations.',
     information: [
       {
-        label: 'Company',
-        text: 'Active Theory',
-      },
-      {
         label: 'Role',
-        text: 'Lead WebGL Developer',
+        text: 'Developer',
       },
       {
-        label: 'Client',
-        text: 'Xbox',
+        label: 'Type',
+        text: 'Predictive Microclimate Tool',
+      },
+      {
+        label: 'Achievement',
+        text: '🏆 3rd Place - KiliHacks (Nairobi)',
       },
     ],
+    links: {
+      github: 'https://github.com/Fadhili5/Kilimani-Prop-Tech-2025',
+      live: 'https://kiliwatch.streamlit.app/',
+    },
     content: [
       {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/1.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/2.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/3.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/4.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/5.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/6.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/7.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/8.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/9.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/10.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/11.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/12.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/13.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/14.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/15.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/16.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/17.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/18.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/xbox/19.jpg'),
-        height: 1080,
-        width: 1920,
+        type: 'text',
+        text: 'Kiliwatch leverages satellite imagery and machine learning algorithms to predict heat hotspots at a granular, neighborhood level. The tool processes satellite-derived environmental variables to generate accurate microclimate forecasts, helping communities better prepare for extreme heat events.',
       },
     ],
   },
   {
-    color: '#ff00ff',
-    image: require('../assets/work/trolli.jpg'),
-    slug: 'trolli',
-    title: 'Trolli',
-    information: [
-      {
-        label: 'Company',
-        text: 'Active Theory',
-      },
-      {
-        label: 'Role',
-        text: 'WebGL Developer',
-      },
-      {
-        label: 'Client',
-        text: 'Trolli',
-      },
-    ],
-    content: [
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/1.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/2.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/3.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/4.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/5.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/6.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/7.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/8.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/trolli/9.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-    ],
-  },
-  {
-    color: '#d533c7',
-    image: require('../assets/work/adventure-time.jpg'),
-    slug: 'adventure-time',
-    title: 'Adventure Time',
-    information: [
-      {
-        label: 'Company',
-        text: 'Active Theory',
-      },
-      {
-        label: 'Role',
-        text: 'WebGL Developer',
-      },
-      {
-        label: 'Client',
-        text: 'HBO + Cartoon Network',
-      },
-    ],
-    content: [
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/1.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/2.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/3.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/4.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/5.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/6.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/7.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/8.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/9.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/10.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/11.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/adventure-time/12.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-    ],
-  },
-  {
-    color: '#ffffff',
-    image: require('../assets/work/studio-maertens.jpg'),
-    slug: 'studio-maertens',
-    title: 'Studio Maertens',
-    information: [
-      {
-        label: 'Company',
-        text: 'Freelancer',
-      },
-      {
-        label: 'Role',
-        text: 'Lead WebGL Developer',
-      },
-      {
-        label: 'Client',
-        text: 'Studio Maertens',
-      },
-    ],
-    content: [
-      {
-        type: 'screenshot',
-        source: require('../assets/case/studio-maertens/1.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/studio-maertens/2.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/studio-maertens/3.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/studio-maertens/4.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/studio-maertens/5.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/studio-maertens/6.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-    ],
-  },
-  {
-    color: '#ff351a',
-    image: require('../assets/work/corvette.jpg'),
-    slug: 'corvette',
-    title: 'Corvette Sound Visualizer',
-    information: [
-      {
-        label: 'Company',
-        text: 'UNIT9',
-      },
-      {
-        label: 'Role',
-        text: 'Lead WebGL Developer',
-      },
-      {
-        label: 'Client',
-        text: 'Commonwealth//McCann + Corvette',
-      },
-    ],
-    content: [
-      {
-        type: 'screenshot',
-        source: require('../assets/case/corvette/1.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/corvette/2.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/corvette/3.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/corvette/4.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/corvette/5.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-    ],
-  },
-  {
-    color: '#00e2a5',
-    image: require('../assets/work/nike.jpg'),
-    slug: 'nike',
-    title: 'Nike City Fast',
-    information: [
-      {
-        label: 'Company',
-        text: 'UNIT9',
-      },
-      {
-        label: 'Role',
-        text: 'Lead Game Developer',
-      },
-      {
-        label: 'Client',
-        text: 'JD Sports + Nike',
-      },
-    ],
-    template: 'landscape',
-    content: [
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/1.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/2.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/3.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/4.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/5.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/6.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/7.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/8.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/9.jpg'),
-        height: 414,
-        width: 736,
-      },
-      {
-        type: 'landscape',
-        source: require('../assets/case/nike/10.jpg'),
-        height: 414,
-        width: 736,
-      },
-    ],
-  },
-  {
-    color: '#fd5c63',
+    color: '#00ffcc',
     image: require('../assets/work/airbnb.jpg'),
-    slug: 'airbnb',
-    title: 'Airbnb Family Trips',
+    slug: 'ecg-classifier',
+    title: 'Abnormal ECG Classifier',
+    description: 'Classifying multi-class ECG signals by incorporating Convolutional Deep Neural Networks (CDNNs), SHapley Additive exPlanations (SHAP) values, and Gradient-weighted Class Activation Mapping (Grad-CAM) to detect a variety of cardiovascular conditions.',
     information: [
       {
-        label: 'Company',
-        text: 'UNIT9',
+        label: 'Role',
+        text: 'ML Engineer',
+      },
+      {
+        label: 'Type',
+        text: 'Medical AI / Deep Learning',
+      },
+      {
+        label: 'Achievement',
+        text: '🏆 2nd Place - Alameda Hacks (USA)',
+      },
+    ],
+    links: {
+      github: 'https://github.com/Fadhili5/Abnormal-ECG-signal-classification',
+      live: 'https://abnormal-ecg-classifier.streamlit.app/',
+    },
+    content: [
+      {
+        type: 'text',
+        text: 'This medical AI system uses deep learning to classify ECG signals across multiple cardiovascular conditions. The model incorporates explainability features through SHAP values and Grad-CAM visualizations, making it possible for medical professionals to understand the reasoning behind each classification decision.',
+      },
+    ],
+  },
+  {
+    color: '#cc0000',
+    image: require('../assets/work/nike.jpg'),
+    slug: 'gazeti-smart',
+    title: 'Gazeti-Smart',
+    description: 'An innovative project that enhances user engagement with newspaper and print media by aggregating related news stories from the web and presenting them through interactive, detailed narrations using pictorial/cartoon sketches and audio narration.',
+    information: [
+      {
+        label: 'Role',
+        text: 'Full-Stack Developer',
+      },
+      {
+        label: 'Type',
+        text: 'News Aggregation & AI Narration',
+      },
+      {
+        label: 'Achievement',
+        text: '🏆 1st Place - Nation Media Hackathon',
+      },
+    ],
+    links: {
+      github: 'https://github.com/Fadhili5/Gazeti-Smart',
+    },
+    content: [
+      {
+        type: 'text',
+        text: 'Gazeti-Smart transforms traditional news consumption by aggregating related stories and presenting them through engaging multimedia formats. The platform generates cartoon-style illustrations and audio narrations to make news more accessible and engaging for diverse audiences.',
+      },
+    ],
+  },
+  {
+    color: '#4a0e4e',
+    image: require('../assets/work/trolli.jpg'),
+    slug: 'materna-ai',
+    title: 'Materna AI',
+    description: 'An AI-powered digital companion providing health education, guidance, and support to expectant mothers. Recognized as 1st Place Winner at Africa\'s Talking Health Hackathon and Top 15 Global Ideas Finalist at Moonshot Awards 2025.',
+    information: [
+      {
+        label: 'Role',
+        text: 'Developer',
+      },
+      {
+        label: 'Type',
+        text: 'AI Health Companion',
+      },
+      {
+        label: 'Achievement',
+        text: '🏆 1st Place - Africa\'s Talking Health Hackathon',
+      },
+    ],
+    links: {
+      github: 'https://github.com/Delbert-Kipyegon/materna-web',
+      live: 'https://materna-web.vercel.app',
+    },
+    content: [
+      {
+        type: 'text',
+        text: 'Materna AI serves as a digital health companion for expectant mothers, providing personalized health education, pregnancy guidance, and emotional support. The platform uses AI to deliver timely, relevant information throughout the pregnancy journey, recognized globally for its potential impact on maternal health outcomes.',
+      },
+    ],
+  },
+  {
+    color: '#0d3e19',
+    image: require('../assets/work/corvette.jpg'),
+    slug: 'efh-rag',
+    title: 'EFH Innovation Sprint',
+    description: 'Built a RAG-based LLM prototype that improved answer relevance by 22% through prompt optimization, demonstrating the ability to leverage AI to efficiently query research documents at the University of Michigan.',
+    information: [
+      {
+        label: 'Organization',
+        text: 'University of Michigan',
       },
       {
         label: 'Role',
-        text: 'Creative Developer',
+        text: 'AI Developer',
       },
       {
-        label: 'Client',
-        text: 'TBWA + Airbnb',
+        label: 'Achievement',
+        text: '🏆 3rd Place - 22% Relevance Improvement',
       },
     ],
     content: [
       {
-        type: 'screenshot',
-        source: require('../assets/case/airbnb/1.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/airbnb/2.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/airbnb/3.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/airbnb/4.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/airbnb/5.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/airbnb/6.jpg'),
-        height: 1080,
-        width: 1920,
-      },
-      {
-        type: 'screenshot',
-        source: require('../assets/case/airbnb/7.jpg'),
-        height: 1080,
-        width: 1920,
+        type: 'text',
+        text: 'This project developed a Retrieval-Augmented Generation (RAG) system optimized for querying research documents. Through careful prompt engineering and optimization, the prototype achieved a 22% improvement in answer relevance compared to baseline approaches, demonstrating effective AI-assisted research capabilities.',
       },
     ],
   },

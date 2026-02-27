@@ -1,4 +1,35 @@
-$color-black: #000;
-$color-white: #fff;
+// NERV Color Palette - Neon Genesis Evangelion Inspired
+$color-black: #0a0a0a;
+$color-white: #e8e8e8;
 
-$font: 'Borda';
+// EVA Primary Colors
+$color-eva-orange: #ff6600;
+$color-eva-red: #cc0000;
+$color-eva-purple: #4a0e4e;
+$color-eva-green: #00ff00;
+$color-eva-blue: #1a1aff;
+
+// NERV UI Colors
+$color-nerv-warning: #ff3300;
+$color-nerv-caution: #ffcc00;
+$color-nerv-active: #00ffcc;
+$color-nerv-dark: #0d0d0d;
+$color-nerv-panel: #1a1a2e;
+
+// Terminal/MAGI Colors
+$color-terminal-text: #00ff41;
+$color-terminal-bg: rgba(0, 0, 0, 0.85);
+$color-scanline: rgba(0, 255, 65, 0.03);
+
+// Accent gradients
+$gradient-eva: linear-gradient(135deg, $color-eva-orange 0%, $color-eva-red 100%);
+$gradient-nerv: linear-gradient(180deg, $color-nerv-panel 0%, $color-black 100%);
+
+// Typography
+$font: 'Orbitron', 'Courier New', monospace;
+$font-japanese: 'Noto Sans JP', sans-serif;
+$font-terminal: 'Share Tech Mono', 'Courier New', monospace;
+
+// Borders
+$border-warning: 3px solid $color-eva-orange;
+$border-caution: 2px dashed $color-nerv-caution;
