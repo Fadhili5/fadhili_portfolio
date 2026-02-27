@@ -108,7 +108,7 @@ module.exports = {
       },
 
       {
-        test: /\.(jpe?g|png|gif|svg|mp3)$/,
+        test: /\.(jpe?g|png|gif|svg|mp3|glb|gltf)$/,
         loader: 'file-loader',
         options: {
           esModule: false,
