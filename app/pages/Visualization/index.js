@@ -17,6 +17,7 @@ export default class Visualization extends Page {
     this.wrapper = new Group()
     this.clock = new Clock()
     this.mixer = null
+    this.modelLoaded = false
 
     // Create triangles around the model
     for (let index = 0; index < 100; index++) {
@@ -24,11 +25,13 @@ export default class Visualization extends Page {
       this.wrapper.add(triangle)
     }
 
-    // Load the GLB model
-    this.loadModel()
+    // Defer model loading until after initial render
   }
 
   loadModel () {
+    if (this.modelLoaded) return
+    this.modelLoaded = true
+    
     const loader = new GLTFLoader()
     
     loader.load(
@@ -58,11 +61,8 @@ export default class Visualization extends Page {
         }
         
         this.wrapper.add(this.model)
-        console.log('Model loaded successfully')
       },
-      (progress) => {
-        console.log('Loading model...', (progress.loaded / progress.total * 100) + '%')
-      },
+      undefined,
       (error) => {
         console.error('Error loading model:', error)
       }
@@ -70,6 +70,9 @@ export default class Visualization extends Page {
   }
 
   async show () {
+    // Load model after triangles start appearing
+    setTimeout(() => this.loadModel(), 500)
+    
     await new Promise(resolve => {
       Promise.all(
         this.wrapper.children.map((child) => {
